@@ -1,0 +1,108 @@
+html{
+    color:bisque;
+}
+
+#table1 {
+    border: solid red;
+    color:bisque;
+    border-radius: 5px;
+}
+#table1 td, #table1 th {
+    border: 2px dashed blue;
+    border-right: 2px solid green;
+    border-left: 2px solid green;
+    padding: 10px;
+}
+td:hover, th {
+    color: green;
+    padding: 30px;
+}
+.blue-th {
+    color: blue;
+}
+.table2 {
+    border: solid 10px rgba(83, 30, 18, 0.589);
+    border-radius: 10px;
+}
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style:italic;
+}
+html {
+    background-image:url(mhTigrexPoster.PNG);
+    opacity: 1;
+    }
+
+body {
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 200;
+    }
+
+#p2 {
+    font-weight: 100;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    margin-left: 50px;
+}
+
+   
+}
+
+.item {
+    width: 10em;
+}
+
+
+img{
+    border-image-width: 10px;
+    color: blue;
+}
+
+.forecast {
+    margin: 0;
+    padding: .3rem;
+    background-color: #eee;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+.forecast > h1,
+.day-forecast {
+    margin: .5rem;
+    padding: .3rem;
+    font-size: 1.2rem;
+}
+
+.day-forecast {
+    background: right/contain content-box border-box no-repeat
+        url('/media/examples/rain.svg') white;
+}
+
+.day-forecast > h2,
+.day-forecast > p {
+    margin: .2rem;
+    font-size: 1rem;
+}
+
+#assiette orange:last-child {
+    background: grey ;
+}
+
+pre {
+    font-family:'Times New Roman', Times, serif;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+#grec {
+    width: 100px;
+    position: static;
+    right: 30px;
+    left: 200px;
+    background: hotpink ;
+}
