@@ -1,0 +1,58 @@
+<!-- jamais d'espaces, jamais d'accents, jamais de caractère spéciaux
+Html ne fait pas de mise en forme, il ne fait que donner du sens au contenu : en faire un titre etc. C'est le navigateur qui met en forme.
+
+Ce document va contenir toutes les <balises>-->
+
+
+
+<!doctype html> <!--= ce document est écrit en html, langage compris par ts les navigateurs du marché-->
+<html> <!--= élément racine, premiere balise qui contient ttes les autres, avec une balise ouvrante et une balise fermante-->
+    <head><!-- fournit des informations au navigateur -->
+        <meta charset="utf=8"><!-- Balise orpheline, pas de balise de fermeture-->
+        <meta name="viewport"
+            content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+        ><!--pour gérer la taille d'affichage sur chaque terminal-->
+        <title>Kurenai no Buta</title><!-- affichage de l'onglet -->
+
+        <!-- Lier une feuille de style -->
+        <link href="css/styles.css" rel="stylesheet">
+    </head>
+
+
+
+    <body><!-- Contenu visible du document -->
+        <div id="page-container">
+
+            <header>
+
+                <h1>    
+                    <a href="index.html" title="Retour à la page d'accueil"><img src="css/covid19-response-logo-fr.jpg" alt=""></a>
+                        
+                    
+                    <strong>Hotel Adriana</strong></h1><!-- h1 : heading/titre level 1-->
+                <p><!-- paragraphe de contenu-->
+                    <strong>Logé et nourris !</strong><br><!-- retour à la ligne -->
+                    <!-- Ce n'est pas une balise de type bloc
+                    mais une balise de type "en ligne", qui suit
+                    les lignes d'écriture. -->
+                </p>
+                <!--navigation dans les pages, dans les parties du document-->
+                <nav>
+                    <ul><!-- collection de lignes i.e. conteneur de lignes -->
+                        <li>
+                            <a href="#" title="Retour à la page d'accueil">Accueil</a>
+                            <a href="https://www.adrar-formation.com/">Menu</a>
+                            <a href="#">Accessibilité</a>
+                            <a href="#">Index</a>
+
+                        </li>
+                        <li><a href="https://www.adrar-formation.com/" target="_new" title="Lien vers le site officiel de l'ADRAR">Surtout pas l'ADRAR !!!</a>
+                            <a href="#">Retour</a>
+                        </li>
+                        <li>
+                            <a href="#development" title="Développement d'application">Développement</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </header>
