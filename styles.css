@@ -24,22 +24,13 @@ td:hover, th {
     border: solid 10px rgba(83, 30, 18, 0.589);
     border-radius: 10px;
 }
-footer {
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-style:italic;
-}
-html {
-    background-image:url(mhTigrexPoster.PNG);
-    opacity: 1;
-    }
 
 body {
     color:rgb(255, 255, 255);
     font-size: 20px;
     font-weight: 200;
+    display: flex;
+    justify-content:flex-end;
     }
 
 #p2 {
@@ -48,14 +39,6 @@ body {
     color: rgb(255, 255, 255);
     margin-left: 50px;
 }
-
-   
-}
-
-.item {
-    width: 10em;
-}
-
 
 img{
     border-image-width: 10px;
@@ -93,10 +76,6 @@ img{
 
 pre {
     font-family:'Times New Roman', Times, serif;
-}
-
-footer {
-    margin-top: 50px;
 }
 
 #grec {
