@@ -1,8 +1,9 @@
 class Personne {
-    constructor(nom, prenom) {
+    constructor(id, nom, prenom) {
+    this.id = id
     this.nom = nom
-    this.prenom = prenom;
+    this.prenom = prenom
     }
 }
-
-module.exports = new Personne()
+// Exporting class
+module.exports = Personne

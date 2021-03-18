@@ -7,6 +7,11 @@ const config = {
     database: 'classe'
 };
 
+// Calling class Personnes
+const user = require('../classes/classes')
+// Call instance via new var trigerring class Person
+const user1 = new user(null, 'Jin', 'Kaneda')
+
 class MySqlUtilities {
     getUsers(callback) {
         var connection = mysql.createConnection(config)
@@ -16,32 +21,32 @@ class MySqlUtilities {
         })
         connection.end()
     }
-    addUsers(callback, user) {
+    addUsers(user1, callback) {
         var connection = mysql.createConnection(config)
         connection.connect()
-        connection.query('INSERT INTO personnes VALUES (NULL,??)', (error, results) => {
+        connection.query('INSERT INTO personnes (nom, prenom) VALUES (?, ?)', [user1.nom, user1.prenom], (error, results) => {
             callback(results, error)
         })
         connection.end()
     }
-    getOneUser(callback) {
+    getOneUser(callback, params) {
         var connection = mysql.createConnection(config)
         connection.connect()
-        connection.query('SELECT * FROM personnes where nom = "Mitsuda"', (error, results) => {
+        connection.query('SELECT * FROM personnes WHERE id = (?)', [params], (error, results) => {
             callback(results, error)
         })
     }
-    deleteOneUser(callback) {
+    deleteOneUser(callback, user) {
         var connection = mysql.createConnection(config)
         connection.connect()
-        connection.query('DELETE FROM personnes where nom = "Hisaishi"', (error, results) => {
+        connection.query('DELETE FROM personnes WHERE id = ?', [19], (error, results) => {
             callback(results, error)
         })
     }
-    modifyOneUser(callback) {
+    modifyOneUser(callback, user) {
         var connection = mysql.createConnection(config)
         connection.connect()
-        connection.query('UPDATE personnes SET nom = "Hisaishi", prenom = "Joe" WHERE id = 17', (error, results) => {
+        connection.query('UPDATE personnes SET nom = ?, prenom = ? WHERE id = 24', [user1.nom, user1.prenom],(error, results) => {
             callback(results, error)
         })
     }
