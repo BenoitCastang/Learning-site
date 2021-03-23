@@ -1,4 +1,4 @@
-INSERT INTO Animal (espece, sexe, date_naissance, nom, commentaires) VALUES 
+INSERT INTO animal (espece, sexe, date_naissance, nom, commentaires) VALUES 
 ('chien', 'F', '2008-02-20 15:45:00' , 'Canaille', NULL),
 ('chien', 'F','2009-05-26 08:54:00'  , 'Cali', NULL),
 ('chien', 'F','2007-04-24 12:54:00' , 'Rouquine', NULL),
