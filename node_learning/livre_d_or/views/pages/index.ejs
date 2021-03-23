@@ -1,0 +1,23 @@
+<!-- In .ejs file, thanks to the ejs module, you can write html here -->
+<!-- js lets you create modules for those html files -->
+<%- include('./header') %>
+
+    <form action="/" method="post" class="ui form">
+
+        <div class="field">
+
+            <label for="message">Message</label>
+
+            <textarea name="message" id="message"></textarea>
+
+        </div>
+
+        <button type="submit" class="ui blue labeled submit icon button">
+
+            <i class="icon edit"></i>send
+            
+        </button>
+
+    </form>
+
+<%- include('./footer') %>
