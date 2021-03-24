@@ -13,6 +13,9 @@ const user = require('../classes/classes')
 const user1 = new user(null, 'Jin', 'Kaneda')
 
 class MySqlUtilities {
+    // ------------------------------------
+    // BODY REQUESTS
+    //-------------------------------------
     getUsers(callback) {
         var connection = mysql.createConnection(config)
         connection.connect()
@@ -29,24 +32,48 @@ class MySqlUtilities {
         })
         connection.end()
     }
-    getOneUser(callback, params) {
+    getOneUserById(user1, callback) {
         var connection = mysql.createConnection(config)
         connection.connect()
-        connection.query('SELECT * FROM personnes WHERE id = (?)', [params], (error, results) => {
+        connection.query('SELECT * FROM personnes WHERE id = (?)', [user1.id], (error, results) => {
             callback(results, error)
         })
     }
-    deleteOneUser(callback, user) {
+    deleteOneUserById(user1, callback) {
         var connection = mysql.createConnection(config)
         connection.connect()
-        connection.query('DELETE FROM personnes WHERE id = ?', [19], (error, results) => {
+        connection.query('DELETE FROM personnes WHERE id = (?)', [user1.id], (error, results) => {
             callback(results, error)
         })
     }
-    modifyOneUser(callback, user) {
+    modifyOneUserById(user1, callback) {
         var connection = mysql.createConnection(config)
         connection.connect()
-        connection.query('UPDATE personnes SET nom = ?, prenom = ? WHERE id = 24', [user1.nom, user1.prenom],(error, results) => {
+        connection.query('UPDATE personnes SET nom = (?), prenom = (?) WHERE id = (?)', [user1.nom, user1.prenom, user1.id],(error, results) => {
+            callback(results, error)
+        })
+    }
+    // ------------------------------------
+    // LINK REQUESTS
+    //-------------------------------------
+    getOneUserByIdLink(params, callback) {
+        var connection = mysql.createConnection(config)
+        connection.connect()
+        connection.query('SELECT * FROM personnes WHERE id = (?)', [params.id], (error, results) => {
+            callback(results, error)
+        })
+    }
+    deleteOneUserByIdLink(params, callback) {
+        var connection = mysql.createConnection(config)
+        connection.connect()
+        connection.query('DELETE FROM personnes WHERE id = (?)', [params.id], (error, results) => {
+            callback(results, error)
+        })
+    }
+    modifyOneUserByIdLink(user1, callback) {
+        var connection = mysql.createConnection(config)
+        connection.connect()
+        connection.query('UPDATE personnes SET nom = (?), prenom = (?) WHERE id = (?)', [user1.nom, user1.prenom, user1.id],(error, results) => {
             callback(results, error)
         })
     }
