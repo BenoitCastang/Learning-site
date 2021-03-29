@@ -12,7 +12,7 @@ let bodyParser = require('body-parser')
 app.set('view engine', 'ejs')
 
 
-// Middleware
+// Middleware 
 
 // set path to static files (css) in local directory, and set url path to static files: localhost/assets/semantic/file url
 // app.use('/assets', express.static('public'))
@@ -25,11 +25,16 @@ app.get('/', (request, response) => {
     // // html rendering
     // response.send('Here we are at root.')
     // // view rendering, with two parameters the file path and the var
+    // creates var test in pages/index
     response.render('pages/index', {test: 'salut'})
 })
 
 app.post('/', (request, response) => {
-    console.log(request.body);
+    console.log(request.body.message);
+    if (request.body.message === undefined || request.body.message === '') {
+        response.render('pages/index', {error: 'Your message is empty ToT'})
+        console.log(error);
+    }
 })
 
 app.listen(8080)
